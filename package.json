@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "site de restauration",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmelineD/EmmelineDohy_3_08022022.git"
+  },
+  "author": "Emmeline DOHY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmmelineD/EmmelineDohy_3_08022022/issues"
+  },
+  "homepage": "https://github.com/EmmelineD/EmmelineDohy_3_08022022#readme"
+}
