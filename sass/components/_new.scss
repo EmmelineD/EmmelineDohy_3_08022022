@@ -1,0 +1,6 @@
+@use "../utils";
+
+//Component "New"
+.new {
+    @include utils.new;
+}

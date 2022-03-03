@@ -1,0 +1,63 @@
+@use "../utils";
+
+//Header
+.banner {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &__header-logo {
+        font-size: 2rem;
+        font-weight: lighter;
+        font-stretch: condensed;
+        padding: 0.4rem 0;
+        cursor: pointer;
+    }
+    &__header-return {
+        position: absolute;
+        font-size: 1.2rem;
+        left: 1rem;
+        top: 1rem;
+        &:hover {
+            font-size: 1.25rem;
+        }
+    }
+    a {
+        color: black;
+    }
+}
+
+//Location section
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.8rem;
+    background-color: utils.$grey;
+    @include utils.inset-shadow;
+    &__label {
+        input {
+            border: none;
+            padding-top: 0.15rem;
+            background-color: transparent;
+            cursor: pointer;
+            &::placeholder {
+                font-size: 0.9rem;
+                font-weight: 550;
+                color: black;
+                opacity: 1;
+                background-color: utils.$grey;
+            }
+            &:focus {
+                outline: none;
+            }        
+        }
+    }
+    &__marker {
+        font-size: 0.8rem;
+        margin-left: 4rem;
+        color: utils.$grey-darker;
+    }
+}

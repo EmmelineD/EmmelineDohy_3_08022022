@@ -1,0 +1,22 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:is(input, .explore, .fonctions, main, footer) {
+    font-family: 'roboto', arial, sans-serif;
+}
+
+:is(.banner__header-logo, h4) {
+    font-family: 'shrikhand', cursive, sans-serif;
+    text-transform: lowercase;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+

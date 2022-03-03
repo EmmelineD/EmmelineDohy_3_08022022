@@ -1,0 +1,74 @@
+@use "../utils";
+
+.fonctions {
+    width: 90%;
+    margin: 3rem auto;
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    .function {
+        max-width: 1800px;
+        margin: 0 auto;
+        ol {
+            list-style: none;
+            counter-reset: listCounter;
+        }
+        li {
+            display: flex;
+            margin: 1.2rem auto;
+            margin-left: 0.5rem;
+            counter-increment: listCounter;
+            position: relative;
+            &:hover {
+                background-color: utils.$color-primary-light;
+            }
+            &:hover .fas {
+                color: utils.$color-primary;
+            }
+        }
+        button {   
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+            white-space:nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &::before {
+                content: counter(listCounter);
+                height: 1.5rem;
+                width: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: white;
+                font-weight: bold;
+                background-color: utils.$color-primary;
+                position: absolute;
+                left: -0.95em;
+                top: 1.45em;
+            }
+            i {
+                position: absolute;
+                left: 2em;
+                top: 1em;
+                font-size: 1.3rem;
+                color: grey;
+            }
+            span {
+                padding-left: 5rem;
+                font-size: 0.75rem;
+                font-weight: 750;
+                cursor: pointer;
+            }
+        }
+        &__btn {
+            padding: 1.5rem;
+            background-color: utils.$grey-lighter;
+            border-radius: 1rem;
+            @include utils.material-shadow;
+        }
+    }
+}
+

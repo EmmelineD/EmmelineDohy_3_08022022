@@ -1,0 +1,64 @@
+@use "../utils";
+
+//Index layout
+main {
+    .main__background {
+        padding: 3rem 0 1rem 0;
+        background-color: utils.$grey-lighter;
+        }
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            margin-left: 5%;
+        }
+        .articles {
+            padding: 0 5% 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            }
+            article {
+                width: 100%;
+            }
+        }
+    
+
+
+//Cards layout
+.card {
+    border-radius: 1rem;
+    background-color: white;
+    @include utils.simple-shadow;
+    &__img {
+        width: 100%;
+        height: 200px;
+        border-radius: 1rem 1rem 0 0;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__content {
+        display: flex;
+        padding: 1em;
+        position: relative;
+    }
+    &__text {
+        h3 {
+            font-size: 1rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+    }
+    &__like {
+        position: absolute;
+        font-size: 1.1rem;
+        top: 1.3rem;
+        right: 1.5rem;       
+    }
+}
