@@ -68,3 +68,68 @@
         -webkit-transition-duration: 1s;
         }
 }
+
+//Checked
+@mixin checked {
+    &:hover .icon{
+        transform: translateX(-6rem);
+        opacity: 1;
+        transition-duration: 0.8s;
+        transition-timing-function: ease;
+        .fa-check {
+            transform: rotate(360deg);
+            transition-delay: 0.3s;
+            transition-duration: 0.3s;
+        }
+    }
+    &:hover .menu__card-price {
+        margin-right: 4rem;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+    }   
+}
+
+//animation appearance menu
+@mixin appear {
+    .menu__starter > :nth-child(2) {
+        animation: appear 0.5s ease-in-out;
+    }
+    .menu__starter > :nth-child(3) {
+        animation: appear 0.75s ease-in-out;
+    }
+    .menu__starter > :nth-child(4) {
+        animation: appear 1s ease-in-out;
+    }
+    .menu__starter > :nth-child(5) {
+        animation: appear 1.5s ease-in-out;
+    }
+    .menu__middle > :nth-child(2) {
+        animation: appear 1s ease-in-out;
+    }
+    .menu__middle > :nth-child(3) {
+        animation: appear 1.5s ease-in-out;
+    }
+    .menu__middle > :nth-child(4) {
+        animation: appear 2s ease-in-out;
+    }
+    .menu__end > :nth-child(2) {
+        animation: appear 2s ease-in-out;
+    }
+    .menu__end > :nth-child(3) {
+        animation: appear 2.5s ease-in-out;
+    }
+    .menu__end > :nth-child(4) {
+        animation: appear 3s ease-in-out;
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: translateY(3rem)
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

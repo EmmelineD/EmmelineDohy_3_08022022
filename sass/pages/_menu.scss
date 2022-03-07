@@ -1,0 +1,133 @@
+@use "../utils";
+
+.title {
+    &__img {
+        img {
+            width: 100%;
+            height: 30vh;
+            object-fit: cover;
+        }
+    }
+}
+
+.menu {
+    margin: -3rem auto 0;
+    padding-bottom: 3rem;
+    background-color: utils.$grey-lighter;
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    &__name {
+        border-radius: 1rem 1rem 0 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1rem 0 1rem;
+        h1 {
+            font-family: 'shrikhand', cursive, sans-serif;
+            font-size: 1.7rem;
+            font-weight: 550;
+        }
+        &-like {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+    &__starter, &__middle, &__end {
+        h2 {
+            margin: 25px 0px 7px 16px;
+            font-weight: 550;
+            position: relative;
+            text-transform: uppercase;
+            &::before {
+                content: "";
+                background-color: utils.$color-tertiary;
+                position: absolute;
+                bottom: -0.5rem;
+                height: 3px;
+                width: 4ch;
+            }
+        }
+    }
+    &__card {
+        background-color: white;
+        margin: 1rem 4%;
+        padding: 0 1rem;
+        border-radius: 1rem;
+        max-width: 100%;
+        overflow: hidden;
+        @include utils.checked;
+        @include utils.simple-shadow;
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            &-text {
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100%;
+                margin: 0.5rem 0.5rem 0.5rem 0rem;
+                h3 {
+                    font-size: 1.1rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: 0.2rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    font-weight: 300;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        &-price {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color : utils.$grey-darker;
+            padding: 0 1.5rem 1rem 0;
+            transition-duration: 0.8s;
+            transition-timing-function: ease;
+        }
+        .icon {
+            width: 5rem;
+            background: #99e2d0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: -7rem;
+            margin-left: 1rem;
+            border: 5px utils.$color-tertiary solid;
+            opacity: 0;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+            .fa-check {
+                background-color: white;
+                border-radius: 1rem;
+                padding: 0.5rem;
+                color: utils.$color-tertiary;
+                transition-duration: 0.5s;
+            }
+        }
+    }
+}
+.main__order {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 5rem 1rem 5rem;
+    .btn-submit {
+        @include utils.explore__button;
+    }
+}
+
+
+
+//animation appearance menu
+@include utils.appear;
+
