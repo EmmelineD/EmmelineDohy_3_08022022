@@ -5,24 +5,42 @@ main {
     .main__background {
         padding: 3rem 0 1rem 0;
         background-color: utils.$grey-lighter;
+        @include utils.desktop {
+            max-width: 1800px;
+            margin: 0 auto;
+            border-radius: 1rem 1rem 0 0;
         }
         h2 {
             font-size: 1.2rem;
             margin-bottom: 1.2rem;
             margin-left: 5%;
+            @include utils.desktop {
+                margin-left: 5%;
+            }
         }
         .articles {
             padding: 0 5% 1rem;
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            @include utils.tablet {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                gap: 2rem;
+            }
+            @include utils.desktop {
+                padding: 0 2%;
             }
             article {
                 width: 100%;
+                @include utils.desktop {
+                    width: 100%;
+                }
             }
         }
-    
-
+    }
+}    
 
 //Cards layout
 .card {
@@ -40,7 +58,7 @@ main {
             height: 250px;
             object-fit: cover;
             object-position: center;
-        }
+        }  
     }
     &__content {
         display: flex;

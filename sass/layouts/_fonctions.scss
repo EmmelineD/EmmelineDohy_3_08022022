@@ -3,9 +3,16 @@
 .fonctions {
     width: 90%;
     margin: 3rem auto;
+    @include utils.desktop {
+        max-width: 1640px;
+        margin: 3rem auto;
+    }
     h2 {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
+        @include utils.desktop {
+            width: 100%;           
+        }
     }
     .function {
         max-width: 1800px;
@@ -13,6 +20,11 @@
         ol {
             list-style: none;
             counter-reset: listCounter;
+            @include utils.desktop {
+                display: flex;
+                gap: 3rem;
+                justify-content: space-between;                       
+            }
         }
         li {
             display: flex;
@@ -20,11 +32,19 @@
             margin-left: 0.5rem;
             counter-increment: listCounter;
             position: relative;
+            @include utils.tablet {
+                justify-content: center;
+                min-width: 340px;
+            }
+            @include utils.desktop {
+                flex-basis: 100%;
+                justify-content: center;  
             &:hover {
                 background-color: utils.$color-primary-light;
             }
             &:hover .fas {
                 color: utils.$color-primary;
+                }
             }
         }
         button {   
@@ -61,6 +81,14 @@
                 font-size: 0.75rem;
                 font-weight: 750;
                 cursor: pointer;
+                @include utils.tablet {
+                    font-size: 0.8rem;
+                    padding-left: 0;
+                }
+                @include utils.desktop {
+                    padding-left: 1rem;
+                    font-size: 0.9rem;
+                }
             }
         }
         &__btn {

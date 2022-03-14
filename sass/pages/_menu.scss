@@ -8,6 +8,19 @@
             object-fit: cover;
         }
     }
+    @include utils.desktop {
+        &__img {
+            width: 70%;
+            margin: auto;
+            border-radius: 1rem;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 30vh;
+                object-fit: cover;
+            }
+        }
+    }
 }
 
 .menu {
@@ -16,6 +29,9 @@
     background-color: utils.$grey-lighter;
     border-radius: 1rem 1rem 0 0;
     width: 100%;
+    @include utils.desktop {
+        width: 60%;
+    }
     z-index: 1;
     position: relative;
     &__name {
@@ -50,6 +66,11 @@
                 width: 4ch;
             }
         }
+        @include utils.desktop {
+            h2 {
+                margin: 2rem 20%;
+            }
+        }
     }
     &__card {
         background-color: white;
@@ -60,6 +81,10 @@
         overflow: hidden;
         @include utils.checked;
         @include utils.simple-shadow;
+        @include utils.desktop {
+            margin: 1em 20%;
+            cursor: pointer;
+        }
         &-content {
             display: flex;
             justify-content: space-between;
@@ -82,16 +107,24 @@
                     font-weight: 300;
                     text-overflow: ellipsis;
                 }
+                @include utils.desktop {
+                    h3 {
+                        font-size: 1rem;
+                    }
+                    p {
+                        font-size: 0.9rem;
+                    }
+                }
             }
         }
         &-price {
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             font-weight: bold;
             color : utils.$grey-darker;
-            padding: 0 1.5rem 1rem 0;
+            padding: 0 1.5rem 0.5rem 0;
             transition-duration: 0.8s;
             transition-timing-function: ease;
         }

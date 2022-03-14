@@ -12,6 +12,11 @@ footer {
         font-weight: lighter;
         padding: 1rem 0 1rem 0;
         margin-left: 5%;
+        @include utils.desktop {
+        text-align: center;
+        font-size: 2.5rem;
+        padding-left: auto;
+        }    
     }
     & ul {
         list-style: none;
@@ -38,14 +43,28 @@ footer {
     &__site-info {
         font-weight: 300;
     }
-    &__partnership ul {
-        gap: 3em;
-    }
     &__partnership--send {
         margin-left: 0.4rem;
     }
-    &__site-info ul {
-        gap: 3em;
-        padding-right: 1rem;
+    @include utils.tablet {
+        &__content {
+            margin: 0 5%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    @include utils.desktop {
+        &__content {
+            display: wrap;
+            justify-content: space-around;
+            padding: 0 1%;
+        }
+        &__partnership ul {
+            gap: 1em;
+        }
+        &__site-info ul {
+            gap: 1em;
+            padding-right: 1rem;
+        }
     }
 }

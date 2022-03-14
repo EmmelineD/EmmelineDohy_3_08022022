@@ -55,18 +55,14 @@
 }
 
 //Like
-//Source https://cssgradient.io/blog/css-gradient-text/
 @mixin like {
     &:hover {
         font-weight: 900;
-        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-        background-clip: text;
+        background: linear-gradient(variables.$color-primary, variables.$color-secondary);
         -webkit-background-clip: text;
         color: transparent;
-        -webkit-text-fill-color: transparent;
         transition-duration: 1s;
-        -webkit-transition-duration: 1s;
-        }
+    }
 }
 
 //Checked
@@ -131,5 +127,25 @@
             opacity: 1;
             transform: translateY(0);
         }
+    }
+}
+
+//media queries
+
+@mixin tablet {
+    @media screen and (min-width: map-get(maps.$breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get(maps.$breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (min-width: map-get(maps.$breakpoints,largest)) {
+        @content;
     }
 }
