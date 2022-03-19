@@ -276,7 +276,6 @@ footer a {
 }
 @media screen and (min-width: 1280px) {
   .footer__content {
-    display: wrap;
     justify-content: space-around;
     padding: 0 1%;
   }
