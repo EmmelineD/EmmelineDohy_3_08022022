@@ -54,7 +54,6 @@ footer {
     }
     @include utils.desktop {
         &__content {
-            display: wrap;
             justify-content: space-around;
             padding: 0 1%;
         }
