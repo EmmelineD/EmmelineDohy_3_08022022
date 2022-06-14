@@ -8,7 +8,8 @@ But : développer un site 100% mobile qui répertorie les menus de restaurants g
 
 Consevoir un Front-end responsive
 
-Compétences développées :        
+Compétences développées :  
+
 ➡ Mettre en place son environnement Front-End   
 ➡ Mettre en place une structure de navigation pour un site web   
 ➡ Utiliser un système de gestion de versions pour le suivi du projet et son hébergement  
